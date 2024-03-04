@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYSELF</title>
+
+   <style>
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+   a{
+    text-decoration: none;
+    color: white;
+    }
+
+    :root {
+    --primary-color: #6366F1;
+    --accent-color: #3f83f8;
+    --text-color: #333333;
+    --link-color: #2563eb;
+    --background-color: #ffffff;
+    --light-gray: #f0f0f0;
+    --gray: #808080;
+    --dark-gray: #555;
+    }
+
+    .parent{
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+    }
+
+    .header_content{
+        width: 100vw;
+        height: 50px;
+        background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    }
+
+    .first_heading{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .first_heading:hover{
+        color: var(--gray);
+    }
+
+    .header_content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .rightpart{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+
+    .anchor{
+        color: black;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .anchor:hover{
+        color: var(--gray);}
+
+        .main_content{
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100vh;
+            margin-top: 124px;
+            display: flex;
+            flex-direction: row;
+            gap: 6.5rem;
+            padding: 1.2rem;
+            height: 423px;
+        }
+
+        .left_description{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            width: 40%;
+        }
+
+        .heading2{
+            font-size: 3rem;
+            font-weight: lighter;
+            animation: tada 0.9s ease forwards 0s;
+            transition: all 0.8s linear 0s;
+            cursor: pointer;
+            
+        }
+
+        @keyframes tada {
+
+            0%{
+                transform: translateX(-100%);
+            }
+
+            100%{
+                transform: translateX(0%);
+            }
+            
+        }
+
+        .heading2:hover{
+          
+            transform: scale(1.02);
+            color: var(--gray);
+        }
+
+        .para2{
+            font-size: 1.8rem;
+            font-weight: 300;
+            animation: tada 1.7s ease forwards 0s;
+        }
+
+        .para3{
+
+            animation: tada 2.5s ease forwards 0s;
+            font-size: 1.02rem;
+            font-weight: 300;
+
+        }
+
+        .right_image{
+            width: 50%;
+            height: 100%;
+            position: relative;
+        }
+        .picture{
+            position: absolute;
+            height: 100%;
+            width: 400px;
+            border: none;
+            border-radius: 2rem;
+            transition:all 1s;
+        }
+
+        .picture:hover{
+            transform: scale(1.02);
+            box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
+        }
+
+        .project_section{
+            background-color: var(--light-gray);
+            /* height: 100vh; */
+        }
+
+        .project{
+            color: rgb(255, 68, 0);
+            text-align: center;
+            font-size: 4rem;
+        }
+
+        .project_mention{
+            /* max-width: 1280px; */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .descriptions{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            text-align: center;
+           padding-top: 8rem;
+           
+        }
+
+        .main_content_project{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card_content{
+            background-image:url(images/Sample-Resume.png);
+            background-size: cover;
+            height: 600px;
+            width: 76%;
+            margin: 0 auto;
+            color: white;
+            position: relative;
+             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+             z-index: 1;
+            border-radius: 2rem;
+            margin-left: 2.2rem;
+        }
+/* 
+        .card_content::after{
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            background-color: #928b8b9a;
+            position: absolute;
+            overflow: hidden;
+            border-radius: 2rem;
+        } */
+
+        .card_content::before{
+                            
+         content: "";
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         transform-origin: left;
+         transform: scaleX(0);
+         transition: all 0.6s linear 0s;
+         background: linear-gradient(45deg, #e3a464, #7084e7be, #4b62d47c);      
+         position: absolute;
+         z-index:-1;
+                
+          }
+
+        .card_content:hover::before{
+                            
+         transform: scaleX(1);
+        overflow: hidden;
+        border-radius: 2rem;
+                           
+         }
+
+        .html {
+            color: rgb(196, 8, 8);
+            font-size: 4rem;
+           
+        }
+        .para_created{
+            color: rgb(196, 8, 8);
+            font-size: 3.2rem;
+        }
+
+        #card_id1{
+            margin-left: 12rem;
+            background-image: url(images/Outline-Gradient-Button.jpg);
+            object-fit: cover;
+
+        }
+
+        #card_id2{
+            background-image: url(images/recipie.jpg);
+        }
+        #card_id3{
+            margin-left: 12rem;
+            background-image: url(images/StudySyn.svg);
+            object-fit: cover;
+        }
+
+        #card_id4{
+            background-image: url(images/grid.png);
+        }
+
+        .contact_me{
+            max-width: 980px;
+            height: 550px;
+            margin: 0 auto;
+            margin-top: 4rem;
+            /* padding-top: 10rem; */
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-image: url(images/for\ email.jpg);
+            object-fit: cover;
+            border-radius: 2rem;
+            transition: all 0.5s ease-out 0s;
+           
+
+
+        }
+
+        .contact_me:hover{
+            transform: scale(1.02);
+            box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
+        }
+
+        .details{
+            color: white;
+            font-size: 2rem;
+            display: flex;
+           flex-direction: column;
+            gap: 4rem;
+            margin-top: 8rem;
+
+        }
+
+        .extra{
+            display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+
+        .contact_01{
+            color: orangered;
+            text-align: center;
+            margin-top: 2.6rem;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .contact_002{
+            width: 100vw;
+            margin-top: 3rem;
+            /* background-color: var(--light-gray); */
+
+        }
+
+        .footer{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text-color);
+            margin-top: 2rem;
+        }
+ 
+   </style>
+</head>
+<body>
+
+   <div class="parent">
+
+    <header>
+
+        <div class="header">
+
+            <div class="header_content">
+
+                <div class="leftpart">
+                    <h2 class="first_heading">Ashutosh</h2>
+
+                </div>
+
+                <div class="rightpart">
+
+                    <a href="#" class="anchor">Projects</a>
+                    <a href="#" class="anchor">Skills</a>
+                    <a href="#" class="anchor">Contact Me</a>
+
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <div class="main_content">
+
+    <div class="left_description">
+
+       <h2 class="heading2">Hi! Ashutosh Pandey this side....</h2>
+
+       <p class="para2">I am a Member of Web Team T.E.S.L.A. NIT PATNA</p>
+
+       <P class="para3"> Here is my portfolio website. Here i am going to introduce MYSELF</P>
+
+    </div>
+
+    <div class="right_image">
+
+      
+        <img src="images/ashutosh.jpeg" alt="" class="picture">
+       
+
+    </div>
+
+
+   </div>
+
+   <div class="project_section">
+
+    <div class="main_content_project">
+
+        <h2 class="project">Projects</h2>
+
+        <div class="project_mention">
+
+           <!-- ?card1 -->
+
+           <div class="card" >
+
+            <div class="card_content">
+
+                <div class="descriptions">
+
+                   <div class="div_html">
+
+                    <h2 class="html">
+                        HTML Resume
+                    </h2>
+                   </div>
+    
+                   <div class="div_para">
+                    <p class="para_created">Created by using HTML and concept of table,tr,td,thead etc</p>
+                   </div>
+
+                </div>
+
+
+            </div>
+           </div>
+            <!-- ?card2 -->
+
+            <div class="card" >
+
+                <div class="card_content"id="card_id1">
+    
+                    <div class="descriptions">
+    
+                       <div class="div_html">
+    
+                        <h2 class="html">
+                            Hire Button Project
+                        </h2>
+                       </div>
+        
+                       <div class="div_para">
+                        <p class="para_created">Created by using HTML and CSS in this overlapping concept is used..</p>
+                       </div>
+    
+                    </div>
+    
+    
+                </div>
+               </div>
+
+
+             <!-- ?card3 -->
+
+             <div class="card">
+
+                <div class="card_content"id="card_id2">
+    
+                    <div class="descriptions">
+    
+                       <div class="div_html">
+    
+                        <h2 class="html">
+                            Recipie project
+                        </h2>
+                       </div>
+        
+                       <div class="div_para">
+                        <p class="para_created">Created by using HTML and CSS containe concept overlapping,table,ul,ol,etc</p>
+                       </div>
+    
+                    </div>
+    
+    
+                </div>
+               </div>
+
+
+            <!-- ?card4 -->
+
+
+            <div class="card">
+
+                <div class="card_content"id="card_id3">
+    
+                    <div class="descriptions">
+    
+                       <div class="div_html">
+    
+                        <h2 class="html">
+                            Study Sync web page
+                        </h2>
+                       </div>
+        
+                       <div class="div_para">
+                        <p class="para_created">Created by using HTML and CSS Full concepts</p>
+                       </div>
+    
+                    </div>
+    
+    
+                </div>
+               </div>
+
+
+             <!-- ?card5 -->
+
+             <div class="card">
+
+                <div class="card_content"id="card_id4">
+    
+                    <div class="descriptions">
+    
+                       <div class="div_html">
+    
+                        <h2 class="html">
+                            Grids Projects
+                        </h2>
+                       </div>
+        
+                       <div class="div_para">
+                        <p class="para_created">Created by using GRIDS Concept</p>
+                       </div>
+    
+                    </div>
+    
+    
+                </div>
+               </div>
+
+
+        </div>
+
+    </div>
+   </div>
+
+  <div class="contact_002">
+
+    <div class="contact_me">
+
+            <h2 class="contact_01">Contact Me</h2>
+    
+        <div class="extra">
+    
+            <div class="details">
+    
+                <div class="email">
+                    <label for="email"> Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+        
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                </div>
+        </div>
+        
+            </div>
+        
+       </div>
+  </div>
+
+   <footer>
+       <p class="footer"> &#169; All rights are reserved by Ashutosh_p</p>
+   </footer>
+
+
+   </div>
+    
+</body>
+</html>
